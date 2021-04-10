@@ -102,3 +102,7 @@ tvsFitted = tvs.fit(train)
 
 # COMMAND ----------
 
+trainedpipeline = tvsfitted.bestModel
+trainedLR = trainedpipeline.stages[1]
+summaryLR = trainedLR.summary
+summaryLR.objectiveHistory
